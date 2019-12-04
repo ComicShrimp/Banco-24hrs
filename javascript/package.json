@@ -1,0 +1,7 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "Javascript backend",
+  "main": "src/server.js",
+  "license": "MIT"
+}
