@@ -1,6 +1,9 @@
 const express = require("express")
-const routes = express.Router()
+const router = express.Router()
 
 // Componentes
+const consultaCliente = require("./components/consultaCliente")
+const operacaoCliente = require("./components/operacaoCliente")
 
 // Routes
+router.get("/:nome", consultaCliente.getCliente)
