@@ -1,6 +1,6 @@
 const Datastore = require("nedb")
 const clientes = new Datastore({
-  filename: "src/database/clientes.db",
+  filename: "database/clientes.db",
   autoload: true
 })
 
