@@ -6,4 +6,4 @@ const consultaCliente = require("./components/consultaCliente")
 const operacaoCliente = require("./components/operacaoCliente")
 
 // Routes
-router.get("/:nome", consultaCliente.getCliente)
+router.get("/:apelido", consultaCliente.getCliente)
