@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "description": "Javascript backend",
   "main": "src/server.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "nedb": "^1.8.0"
+  }
 }
