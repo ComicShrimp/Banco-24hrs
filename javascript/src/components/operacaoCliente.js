@@ -6,6 +6,26 @@ module.exports = {
   },
 
   async saqueCliente(request, response) {
+    const apelido = request.params.apelido
+    const { valor } = request.body
+
+    let cliente
+
+    clientes.findOne({ apelido }, function(error, doc) {
+      if (doc) {
+        cliente = doc
+      } else {
+        return response.status(400).json({ message: "Cliente Não Existe" })
+      }
+    })
+
+    clientes.update(
+      { apelido },
+      { $set: { valor: cliente.saldo - valor } },
+      { multi: false },
+      function(error) {}
+    )
+
     return response.status(200)
   },
 
@@ -15,7 +35,7 @@ module.exports = {
 
     let numeroTransacoes = transacoes != 0 ? transacoes : 5
 
-    let cliente = clientes.findOne({ apelido }, function(error, doc) {
+    clientes.findOne({ apelido }, function(error, doc) {
       if (doc) {
         return response.status(200).json(doc.extrato.slice(0, numeroTransacoes))
       } else {
