@@ -19,7 +19,7 @@ Todo servidor de Banco deve ter um banco de dados que guarde, no minimo, os segu
 - Saldo
 - Extrato (Deve-se manter, no minimo, as 5 ultimas trasações)
 
-*Obs:* O extrato deve ser guardado, ou manipulado, como um array de objetos com os campos `operacao`, `valor` e `saldo` 
+_Obs:_ O extrato deve ser guardado, ou manipulado, como um array de objetos com os campos `operacao`, `valor` e `saldo`
 
 # Padronização das Rotas e requisições
 
@@ -28,6 +28,7 @@ Todos os serviços fornecidos pelos endpoints devem seguir esta mesma estrutura�
 ## Cadastro de Clientes
 
 Metodo POST:
+
 ```
 http://ip:porta/cadastro
 ```
@@ -42,11 +43,13 @@ Este metodo recebe como parâmetro um json com as seguintes informações:
   "saldo": 123.45
 }
 ```
+
 Podem existir campos adicionais, porem, eles não devem ser obrigatórios.
 
 # Consulta de Cliente
 
 Metodo GET:
+
 ```
 http://ip:porta/numero_da_conta
 ```
@@ -59,9 +62,47 @@ Deve ser retornado um Json com estes campos:
   "cartao": 123456789,
   "saldo": 123.45,
   "ultimaTransacao": {
-    "operacao" : "Titulo",
+    "operacao": "Titulo",
     "valor": -45.67,
-    "saldo": 456.98 
-    }
+    "saldo": 456.98
+  }
+}
+```
+
+# Metodo de Extrato
+
+Metodo GET:
+
+```
+http://ip:porta/numero_da_conta/extrato
+```
+
+Deve ser enviado também um corpo em json com a informação de quantos extratos deseja receber.
+
+```json
+{
+  "qtd": 5
+}
+```
+
+Campos de retorno:
+
+```json
+{
+  "nome": "Nome do Cliente",
+  "saldo": 123.45,
+  "extrato": [
+    {
+      "operacao": "titulo",
+      "valor": 1234.56,
+      "saldo": 325.76
+    },
+    {
+      "operacao": "titulo",
+      "valor": 873.56,
+      "saldo": 735.76
+    },
+    ...
+  ]
 }
 ```
