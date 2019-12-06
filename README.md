@@ -15,11 +15,22 @@ Todo servidor de Banco deve ter um banco de dados que guarde, no minimo, os segu
 - Nome
 - Imagem (Apenas a URL, pois será carregado no frontend)
 - Numero do Cartão (9 digitos)
+- Senha (Até 10 digitos)
 - Numero da Conta (5 digitos)
 - Saldo
 - Extrato (Deve-se manter, no minimo, as 5 ultimas trasações)
 
 _Obs:_ O extrato deve ser guardado, ou manipulado, como um array de objetos com os campos `operacao`, `valor` e `saldo`
+
+## Padronização de Nomes
+
+Cada banco deverar possuir um unico numero de prefixo, tanto no numero do cartão, quanto no numero da conta. Segue a tabela com o nome e o prefixo de cada banco, ou seja, um numero que semore estará presente no inicio. Exemplo: Numero de conta: 56789 é do Banco do Brasil por possuir o prefixo "5". Segue abaixo a tabela completa:
+
+| Linguagem  | Nome do Banco   | Prefixo Conta/Cartão |
+| ---------- | --------------- | -------------------- |
+| JavaScript | Banco do Brasil | "5"                  |
+| PHP        | Itaú            | "4"                  |
+| Python     | Bradesco        | "3"                  |
 
 # Padronização das Rotas e requisições
 
@@ -38,6 +49,7 @@ Este metodo recebe como parâmetro um json com as seguintes informações:
 ```json
 {
   "nome": "Nome do cliente",
+  "senha": "1234567890",
   "cartao": 123456789,
   "conta": 12345,
   "saldo": 123.45
@@ -59,6 +71,7 @@ Deve ser retornado um Json com estes campos:
 ```json
 {
   "nome": "Nome do cliente",
+  "imagem": "http://urldafoto"
   "cartao": 123456789,
   "saldo": 123.45,
   "ultimaTransacao": {
@@ -81,6 +94,7 @@ Deve ser enviado também um corpo em json com a informação de quantos extratos
 
 ```json
 {
+  "senha": "1234567890"
   "qtd": 5
 }
 ```
@@ -106,3 +120,45 @@ Campos de retorno:
   ]
 }
 ```
+
+## Metodo Saque
+
+Metodo POST:
+
+```
+http://ip:porta/numero_da_conta/saque
+```
+
+_Obs:_ O valor do saque deve ser absoluto e nunca negativo.
+Deve ser enviado um Json contendo os dados necessários:
+
+```json
+{
+  "senha": "1234567890",
+  "valor": "123.65"
+}
+```
+
+## Metodo Depósito
+
+Metodo POST:
+
+```
+http://ip:porta/numero_da_conta/deposito
+```
+
+_Obs:_ O valor do saque deve ser absoluto e nunca negativo.
+Deve ser enviado um Json contendo os dados necessários:
+
+```json
+{
+  "Remetente": "Nome de pessoa que fez deposito",
+  "Valor": 213.54
+}
+```
+
+_Recomendação:_ A mensagem pode ser guardada no extrato da seguinte maneira: "Deposito de nome_da_pessoa".
+
+## Considerações finais
+
+O metodo de trasferência não irá existir, pois, o frontend será encarregado de realizar o saque na conta da pessoa, que está fazendo o depósito, e depositar na conta de destino.
