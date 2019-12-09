@@ -14,7 +14,7 @@ Todo servidor de Banco deve ter um banco de dados que guarde, no minimo, os segu
 
 - Nome
 - Imagem (Apenas a URL, pois será carregado no frontend)
-- Numero do Cartão (9 digitos)
+- Numero do Cartão (16 digitos)
 - Senha (Até 10 digitos)
 - Numero da Conta (5 digitos)
 - Saldo
