@@ -8,8 +8,6 @@ const cadastraCliente = require("./components/cadastraCliente")
 
 // Routes
 router.post("/cadastro", cadastraCliente.cadastraCliente)
-router.get("/:apelido", consultaCliente.getCliente)
-router.post("/cadastra", cadastraCliente.criarCliente)
-router.get("/:apelido/extrato", operacaoCliente.extratoCliente)
+router.get("/:conta", consultaCliente.getCliente)
 
 module.exports = router
