@@ -49,6 +49,7 @@ Este metodo recebe como parâmetro um json com as seguintes informações:
 ```json
 {
   "nome": "Nome do cliente",
+	"imagem": "http://urldafoto",
   "senha": "1234567890",
   "cartao": 123456789,
   "conta": 12345,
