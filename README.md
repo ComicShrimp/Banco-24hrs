@@ -140,6 +140,14 @@ Deve ser enviado um Json contendo os dados necessários:
 }
 ```
 
+Deve retornar um json contendo a confirmação:
+
+```json
+{
+	"mensagem": "Saque Realizado com sucesso"
+}
+```
+
 ## Metodo Depósito
 
 Metodo POST:
@@ -153,8 +161,8 @@ Deve ser enviado um Json contendo os dados necessários:
 
 ```json
 {
-  "Remetente": "Nome de pessoa que fez deposito",
-  "Valor": 213.54
+  "remetente": "Nome de pessoa que fez deposito",
+  "valor": 213.54
 }
 ```
 
