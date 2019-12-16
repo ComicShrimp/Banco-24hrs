@@ -67,6 +67,13 @@ Metodo GET:
 http://ip:porta/numero_da_conta
 ```
 
+Deve ser Enviado um Json com a senha:
+```json
+{
+	"senha": "123456789"
+}
+```
+
 Deve ser retornado um Json com estes campos:
 
 ```json

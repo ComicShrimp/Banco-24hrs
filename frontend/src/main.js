@@ -11,6 +11,7 @@ function createWindow() {
   })
 
   win.setAutoHideMenuBar(true)
+  win.setAppDetails
 
   // e carregar o index.html do aplicativo.
   win.loadFile("src/html/index.html")
