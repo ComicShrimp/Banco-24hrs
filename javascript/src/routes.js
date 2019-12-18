@@ -6,9 +6,15 @@ const consultaCliente = require("./components/consultaCliente")
 const operacaoCliente = require("./components/operacaoCliente")
 const cadastraCliente = require("./components/cadastraCliente")
 
-// Routes
-router.get("/:apelido", consultaCliente.getCliente)
-router.post("/cadastra", cadastraCliente.criarCliente)
-router.get("/:apelido/extrato", operacaoCliente.extratoCliente)
+//
+
+// Cria e Recupera o Cliente
+router.post("/cadastro", cadastraCliente.cadastraCliente)
+router.get("/:conta", consultaCliente.getCliente)
+
+// Interações com clientes
+router.post("/:conta/saque", operacaoCliente.saqueCliente)
+router.post("/:conta/deposito", operacaoCliente.depositoCliente)
+router.get("/:conta/extrato", operacaoCliente.extratoCliente)
 
 module.exports = router

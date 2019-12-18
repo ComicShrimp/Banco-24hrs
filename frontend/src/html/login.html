@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/login.css" />
+    <script type="text/javascript" src="../javascript/login.js" async></script>
+    <title>Login</title>
+  </head>
+  <body>
+    <div id="topo">
+      <a href="../html/index.html" class="botao" id="voltar"><< Voltar</a>
+    </div>
+    <div class="conteudo">
+      <form onSubmit="fazLogin(); return false;">
+        <label>Numero da Conta:</label><br />
+        <input type="number" id="numeroDaConta" required /><br />
+        <label>Senha:</label><br />
+        <input type="password" id="senha" required /><br />
+        <div id="botaoSubmmit">
+          <button id="botaoLogin" class="botao">
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
