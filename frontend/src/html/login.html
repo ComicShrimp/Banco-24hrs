@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="../css/login.css" />
+    <script type="text/javascript" src="../javascript/login.js"></script>
     <title>Login</title>
   </head>
   <body>
@@ -10,13 +11,15 @@
       <a href="../html/index.html" class="botao" id="voltar"><< Voltar</a>
     </div>
     <div class="conteudo">
-      <form>
+      <form onsubmit="fazLogin()">
         <label>Numero da Conta:</label><br />
-        <input type="text" /><br />
+        <input type="number" id="numeroDaConta" required /><br />
         <label>Senha:</label><br />
-        <input type="password" /><br />
+        <input type="password" id="senha" required /><br />
         <div id="botaoSubmmit">
-          <button class="botao" type="submit">Login</button>
+          <button id="botaoLogin" class="botao">
+            Login
+          </button>
         </div>
       </form>
     </div>
