@@ -2,8 +2,13 @@
 
 namespace App\Controller;
 
+use App\Entity\Cliente;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Response;
+
+
 
 class HomeController extends AbstractController
 {
@@ -12,9 +17,15 @@ class HomeController extends AbstractController
      */
     public function index()
     {
+       
         return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/HomeController.php',
+            'message' => 'API Bradesco!',
+            'version' => '1.0',
         ]);
     }
+
+    
+
+
+
 }
