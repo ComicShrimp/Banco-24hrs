@@ -19,7 +19,7 @@ module.exports = {
           imagem: doc.imagem,
           cartao: doc.cartao,
           saldo: doc.saldo,
-          ultimaTransacao: doc.extrato[0]
+          ultimaTransacao: doc.extrato[doc.extrato.length - 1]
         })
       } else {
         return response.status(400).json({ message: "Cliente Não Existe" })

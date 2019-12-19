@@ -1,2 +1,1 @@
-{"nome":"Mário","imagem":"https://i.imgur.com/C8Q7oWe.jpg","senha":"123","cartao":551293214,"conta":59688,"saldo":100.5,"extrato":[{"operacao":"Cliente Criado","valor":100.5,"saldo":100.5}],"_id":"BiILAMnghH6msKiz"}
 {"nome":"Mário","imagem":"https://i.imgur.com/C8Q7oWe.jpg","senha":"123","cartao":551293214,"conta":59688,"saldo":201.01,"extrato":[{"operacao":"Cliente Criado","valor":100.5,"saldo":100.5},{"operacao":"Deposito de Deposito no Caixa","valor":100.51,"saldo":201.01}],"_id":"BiILAMnghH6msKiz"}
