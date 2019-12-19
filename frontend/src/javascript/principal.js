@@ -38,4 +38,6 @@ function deposito() {
   window.location.replace("../html/deposito.html")
 }
 
-function trasferencia() {}
+function trasferencia() {
+  window.location.replace("../html/transferencia.html")
+}

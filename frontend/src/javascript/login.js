@@ -22,7 +22,7 @@ async function fazLogin() {
     const response = await api.get(url + numeroDaConta.value, {
       senha: senha.value
     })
-    if (response.status == 400) {
+    if (response.status != 200) {
       alert("Senha ou Numero da Conta Incorretos")
     } else {
       sessionStorage.setItem("numeroDaConta", numeroDaConta.value)
