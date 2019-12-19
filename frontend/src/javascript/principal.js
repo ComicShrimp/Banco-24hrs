@@ -34,6 +34,8 @@ function saque() {
   window.location.replace("../html/saque.html")
 }
 
-function deposito() {}
+function deposito() {
+  window.location.replace("../html/deposito.html")
+}
 
 function trasferencia() {}

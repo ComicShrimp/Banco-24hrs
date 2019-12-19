@@ -25,8 +25,8 @@ async function verificaCampos() {
       url = process.env.BRADESCO_URL
     }
 
-    let numeroConta = Math.random() * 9999 + 1000
-    let numeroCartao = Math.random() * 99999999 + 10000000
+    let numeroConta = Math.floor(Math.random() * 9999) + 1000
+    let numeroCartao = Math.floor(Math.random() * 99999999) + 10000000
 
     numeroConta = parseInt(prefixo + numeroConta)
     numeroCartao = parseInt(prefixo + numeroCartao)
@@ -36,7 +36,7 @@ async function verificaCampos() {
       senha: senha.value,
       cartao: numeroCartao,
       conta: numeroConta,
-      saldo: saldoInicial.value
+      saldo: parseFloat(saldoInicial.value)
     })
 
     alert(response.data.message + "\nSeu numero da conta é: " + numeroConta)
