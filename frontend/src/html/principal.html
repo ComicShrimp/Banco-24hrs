@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/principal.css" />
+    <script
+      type="text/javascript"
+      src="../javascript/principal.js"
+      async
+    ></script>
+    <title id="titulo">Nome</title>
+  </head>
+  <body>
+    <div id="topo">
+      <a href="../html/login.html" class="botao" id="voltar">Sair</a>
+    </div>
+    <div class="tudo">
+      <br />
+      <div id="imagem"></div>
+      <div class="informacoes">
+        <label id="nome">Nome</label><br />
+        <label id="saldo">Saldo</label><br />
+      </div>
+      <div class="informacoes2">
+        <label id="ultimaTrasacaoTitulo">Ultima Transação:</label><br />
+        <label id="operacao">operacao</label><br />
+        <label id="valor">valor</label>
+      </div>
+    </div>
+    <div class="botoes">
+      <button class="botao" id="extrato" onclick="extrato()">Extrato</button
+      ><br />
+      <button class="botao" onclick="saque()">Saque</button><br />
+      <button class="botao">Depósito</button><br />
+      <button class="botao">Transferencia</button>
+    </div>
+  </body>
+</html>

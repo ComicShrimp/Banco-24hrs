@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="../css/criaConta.css" />
-    <script type="text/javascript" src="../javascript/cadastro.js"></script>
+    <script
+      type="text/javascript"
+      src="../javascript/cadastro.js"
+      async
+    ></script>
     <title>Criar Nova Conta</title>
   </head>
   <body>
@@ -11,9 +15,9 @@
       <a href="../html/index.html" class="botao" id="voltar"><< Voltar</a>
     </div>
     <div class="conteudo">
-      <form onsubmit="verificaCampos()">
+      <form onSubmit="verificaCampos();return false">
         <label>Escolha um Banco:</label><br />
-        <select name="banco">
+        <select name="banco" id="selecionaBanco">
           <option value="BB">Banco do Brasil</option>
           <option value="Itau">Ítau</option>
           <option value="Bradesco">Bradesco</option>
@@ -33,7 +37,7 @@
         <input type="number" step="0.01" min="0.00" required id="saldo" /><br />
 
         <div id="botaoSubmmit">
-          <button class="botao" type="submit">Login</button>
+          <button class="botao" type="submit">Criar Conta</button>
         </div>
       </form>
     </div>

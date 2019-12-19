@@ -1,0 +1,3 @@
+{"nome":"Mario","imagem":"https://i.imgur.com/C8Q7oWe.jpg","senha":"123","cartao":526654977,"conta":510364,"saldo":"123.45","extrato":[{"operacao":"Cliente Criado","valor":"123.45","saldo":"123.45"}],"_id":"fIs6Yk3aATyxR1vM"}
+{"nome":"Mario","imagem":"https://i.imgur.com/C8Q7oWe.jpg","senha":"123","cartao":548171517,"conta":53515,"saldo":"123.54","extrato":[{"operacao":"Cliente Criado","valor":"123.54","saldo":"123.54"}],"_id":"jLBeD0P5CG6EkTpW"}
+{"nome":"Mario","imagem":"https://i.imgur.com/C8Q7oWe.jpg","senha":"123","cartao":548171517,"conta":53515,"saldo":111,"extrato":[{"operacao":"Cliente Criado","valor":"123.54","saldo":"123.54"},{"operacao":"Saque na Conta Corrente","valor":"12.54","saldo":111}],"_id":"jLBeD0P5CG6EkTpW"}
