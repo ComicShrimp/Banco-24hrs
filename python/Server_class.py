@@ -78,9 +78,6 @@ class Conta:
         if(valor < self.saldo):
             self.saldo = self.saldo - valor
     
-    
-    
-    def
 
 class Operacao:
     def __init__(self,data)
