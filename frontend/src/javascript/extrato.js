@@ -15,7 +15,7 @@ async function extrato() {
   )
 
   if (response.status == 200) {
-    sessionStorage.setItem("extrato", JSON.stringify(response.data))
+    sessionStorage.setItem("extrato", JSON.stringify(response.data).extrato)
     window.location.replace("../html/visualizaExtrato.html")
   } else {
     alert(response.data.mensagem)

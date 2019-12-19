@@ -1,0 +1,13 @@
+version: "3"
+services:
+  database:
+    image: postgres:9.6
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - ./../resources/database:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: teste
+      POSTGRES_PASSWORD: admin
+      POSTGRES_USER: admin

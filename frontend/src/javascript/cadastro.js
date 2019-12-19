@@ -33,6 +33,7 @@ async function verificaCampos() {
 
     const response = await api.post(url + "cadastro", {
       nome: nome.value,
+      imagem: "https://i.imgur.com/C8Q7oWe.jpg",
       senha: senha.value,
       cartao: numeroCartao,
       conta: numeroConta,
