@@ -1,3 +1,56 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+
+
+cliente:
+    path: /cliente
+    controller: App\Controller\ClienteController::index
+    methods: [GET]
+    defaults:
+        _format: json
+
+cadastro:
+    path: /cadastro
+    controller: App\Controller\ClienteController::storeClient
+    methods: POST
+    defaults:
+        _format: json
+
+show:
+    path: /show
+    controller: App\Controller\ClienteController::showClients
+    methods: GET
+    defaults:
+        _format: json
+
+showclient:
+    path: /{conta}
+    controller: App\Controller\ClienteController::getClient
+    methods: GET
+    defaults:
+        _format: json
+
+extrato:
+    path: /{conta}/extrato
+    controller: App\Controller\ClienteController::getExtrato
+    methods: GET
+    defaults:
+        _format: json
+
+saque:
+    path: /{conta}/saque
+    controller: App\Controller\ClienteController::makeWithDraw
+    methods: POST
+    defaults:
+        _format: json
+        
+deposito:
+    path: /{conta}/deposito
+    controller: App\Controller\ClienteController::makeDeposit
+    methods: POST
+    defaults:
+        _format: json
+                
+        

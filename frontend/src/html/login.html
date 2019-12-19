@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="../css/login.css" />
-    <script type="text/javascript" src="../javascript/login.js"></script>
+    <script type="text/javascript" src="../javascript/login.js" async></script>
     <title>Login</title>
   </head>
   <body>
@@ -11,7 +11,7 @@
       <a href="../html/index.html" class="botao" id="voltar"><< Voltar</a>
     </div>
     <div class="conteudo">
-      <form onsubmit="fazLogin()">
+      <form onSubmit="fazLogin(); return false;">
         <label>Numero da Conta:</label><br />
         <input type="number" id="numeroDaConta" required /><br />
         <label>Senha:</label><br />
